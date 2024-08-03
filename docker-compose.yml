@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: <contraseña>
+    volumes:
+      - <directorio host data>:/var/lib/postgresql/data
+      - <directorio host backup>:/var/lib/postgresql/backup
+    ports:
+      - "5432:5432"
+  api-nest:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
