@@ -1,0 +1,10 @@
+services:
+  api-nest:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /home/poncho/Dev/devops/ejemplo-1/api-rest:/app
+    ports:
+      - "3000:3000"
+

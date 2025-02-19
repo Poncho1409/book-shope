@@ -1,0 +1,2 @@
+CREATE USER booker WITH PASSWORD 'book123';
+CREATE DATABASE book_shop OWNER booker;

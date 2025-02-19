@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: pass123
+    volumes:
+      - /home/poncho/Dev/devops/ejemplo-1/bd/postgres_data:/var/lib/postgresql/data
+      - /home/poncho/Dev/devops/ejemplo-1/bd/postgres_backup:/var/lib/postgresql/backup
+    ports:
+      - "5432:5432"
+
